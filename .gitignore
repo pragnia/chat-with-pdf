@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+*.env
+
+# FAISS index + uploads
+faiss_index/
+uploads/
+*.faiss
+*.pkl
+*.bin
+*.pdf
+
+# Logs / cache
+*.log
+.cache/
+__pycache__/
+*.bak
+*.tmp
+*.swp
+
+# Build / dist
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE / editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Node (if used)
+node_modules/
+package-lock.json
+yarn.lock

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat with PDF | Gemini AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="SmartPDF Logo">
+      <h2>SmartPDF AI</h2>
+    </div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how">How It Works</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Chat with Your PDFs using <span>Gemini AI</span></h1>
+      <p>Upload your PDFs, ask questions, and get instant, AI-powered insights — all in one place.</p>
+      
+      <div class="interaction-box">
+        <div class="upload-section">
+          <input type="file" id="pdfs" multiple accept=".pdf" />
+          <button onclick="uploadPDFs()">Upload & Process</button>
+        </div>
+
+        <div class="chat-section">
+          <input type="text" id="question" placeholder="Ask something about your PDFs..." />
+          <button onclick="askQuestion()">Ask</button>
+        </div>
+      </div>
+
+      <div id="response" class="response"></div>
+    </div>
+
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='ai-chat.png') }}" alt="AI Illustration">
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h2>Powerful Features to Work Smarter</h2>
+    <p class="section-subtitle">Gemini AI makes understanding and searching through PDFs effortless.</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <img src="{{ url_for('static', filename='icons/search.png') }}" alt="Instant Search">
+        <h3>Instant Search</h3>
+        <p>Ask any question and get relevant answers from your PDFs within seconds.</p>
+      </div>
+      <div class="feature-card">
+        <img src="{{ url_for('static', filename='icons/summarize.png') }}" alt="Summarize">
+        <h3>Smart Summaries</h3>
+        <p>Automatically summarize long PDFs into concise, easy-to-read insights.</p>
+      </div>
+      <div class="feature-card">
+        <img src="{{ url_for('static', filename='icons/secure.png') }}" alt="Privacy">
+        <h3>Privacy Focused</h3>
+        <p>Your PDFs are processed securely. Nothing is stored or shared — ever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="how">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <p>Upload one or more PDF files you want to explore.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <p>Let Gemini process and extract meaningful data in seconds.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <p>Ask any question — get instant answers straight from your files.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Is my data safe?</summary>
+        <p>Yes! Your documents are processed securely and never stored permanently.</p>
+      </details>
+      <details>
+        <summary>Can I upload multiple PDFs?</summary>
+        <p>Yes, Gemini AI supports multiple PDF uploads for cross-document queries.</p>
+      </details>
+      <details>
+        <summary>Does it work on mobile?</summary>
+        <p>Absolutely — SmartPDF AI is fully responsive and mobile-friendly.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 SmartPDF AI | Powered by Gemini</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat with PDF</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>💬 Chat with PDF using Gemini</h1>
+
+    <div class="upload-section">
+      <input type="file" id="pdfs" multiple accept=".pdf" />
+      <button onclick="uploadPDFs()">Upload & Process</button>
+    </div>
+
+    <div class="chat-section">
+      <input type="text" id="question" placeholder="Ask a question..." />
+      <button onclick="askQuestion()">Ask</button>
+    </div>
+
+    <div id="response"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> -->

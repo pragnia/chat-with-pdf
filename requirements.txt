@@ -1,0 +1,10 @@
+flask
+flask-cors
+langchain
+langchain-community
+langchain-core
+langchain-google-genai
+PyPDF2
+faiss-cpu
+sentence-transformers
+python-dotenv
