@@ -1,13 +1,15 @@
 import os
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_openai import OpenAIEmbeddings
 
 
 INDEX_PATH = "faiss_index"
 
 def get_embeddings():
-    return OpenAIEmbeddings(model="text-embedding-3-small")
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise ValueError("Missing OPENAI_API_KEY in Render Environment Variables")
+    return OpenAIEmbeddings(model="text-embedding-3-small", api_key=api_key)
 
 def get_vector_store(text_chunks):
     if not text_chunks:
